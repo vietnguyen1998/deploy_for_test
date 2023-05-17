@@ -1,0 +1,170 @@
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid yellow;
+  color: white;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  color: yellow;
+}
+
+.react-tabs__tab--disabled {
+  color: grey;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.btn-sub-add {
+  background-color: #525151;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn-sub-add:hover {
+  background-color: #747272;
+}
+
+.noarrows::-webkit-outer-spin-button,
+.noarrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.noarrows {
+  background-color: #525151;
+  border-radius: 5px;
+  color: white;
+}
+
+.noarrows:hover {
+  background-color: #747272;
+}
+
+.lotteryyellow-btn {
+  background-color: transparent;
+  color: gold;
+  border-radius: 5px;
+  border-color: gold;
+}
+
+.lotterygrey-btn {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: white;
+  border-radius: 5px;
+  border-color: gray;
+}
+
+.winning-ticket {
+  background-color: #747272;
+  color: gold;
+  border-radius: 5px;
+  letter-spacing: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.ticket-number {
+  background-color: goldenrod;
+  color: white;
+  border-radius: 5px;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+}
+
+.step {
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+}
+
+.step-circle {
+  background-color: goldenrod;
+  width: 30px;
+  height: 30px;
+  margin-left: 40%;
+  border-radius: 90px;
+}
+
+.transparent-modal .modal-content {
+  background-color: transparent;
+}
+
+.details-table {
+  background-color: #677082;
+  border: transparent;
+}
+
+p.whiteToggle.collapsed::before {
+  content: "Details ^";
+  color: white;
+}
+p.whiteToggle::before {
+  content: "Hide ^";
+  color: white;
+}
+
+.lotteryBuyTicket button:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  left: -9px;
+  background: #0f1f38;
+  top: 52%;
+  transform: translateY(-50%);
+}
+.lotteryBuyTicket button:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  right: -9px;
+  background: #0f1f38;
+  top: 52%;
+  transform: translateY(-50%);
+}
