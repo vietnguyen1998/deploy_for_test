@@ -176,7 +176,7 @@ const Home = (props) => {
           </div>
         </div>
 
-        {/* // <!-- WHAT IS Fuzanglong.COM? --> */}
+        {/* // <!-- WHAT IS Fuzanglong.io? --> */}
 
         <InfoPanel />
 

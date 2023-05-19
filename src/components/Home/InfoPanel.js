@@ -20,7 +20,7 @@ const InfoPanel = () => {
             data-wow-duration="1.5s"
             data-wow-delay="0s"
           >
-            WHAT IS FUZANGLONG.COM?
+            WHAT IS Fuzanglong.io?
           </h2>
           <br />
           <img
@@ -37,13 +37,13 @@ const InfoPanel = () => {
             data-wow-duration="1.5s"
             data-wow-delay="0s"
           >
-            Fuzanglong.com is the world’s first smart contract-based, sports
+            Fuzanglong.io is the world’s first smart contract-based, sports
             betting pool creator. <br />
             <br />
             Unlike traditional sports betting platforms, where odds are
             determined by opaque and centralized betting organizations or
             individual bookmakers putting out odds that ultimately favor
-            bookmakers, Fuzanglong.com taps into the wisdom of the crowds to
+            bookmakers, Fuzanglong.io taps into the wisdom of the crowds to
             determine more fair betting odds that favor a larger number of
             winners. <br />
             <br />
@@ -56,7 +56,7 @@ const InfoPanel = () => {
         </div>
       </div>
 
-      {/* <!-- WHY play WITH Fuzanglong.COM? -->  */}
+      {/* <!-- WHY play WITH Fuzanglong.io? -->  */}
 
       <div style={{ backgroundColor: "#1E1E1E" }}>
         <div className="container">
@@ -80,7 +80,7 @@ const InfoPanel = () => {
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    Why play with Fuzanglong.com?
+                    Why play with Fuzanglong.io?
                   </button>
                 </h3>
               </div>
@@ -93,7 +93,7 @@ const InfoPanel = () => {
               >
                 <div className="card-body">
                   <span>
-                    Fuzanglong.com was designed to tap on the wisdom of the crowds.
+                    Fuzanglong.io was designed to tap on the wisdom of the crowds.
                     <br />
                     <br />
                     By enabling variable odds for all sports betting pools, odds
@@ -133,7 +133,7 @@ const InfoPanel = () => {
               >
                 <div className="card-body">
                   <span>
-                    Fuzanglong.com supports any ERC-20 digital token, and users can
+                    Fuzanglong.io supports any ERC-20 digital token, and users can
                     play or create pools using their existing Metamask address on
                     a variety of sporting events.
                     <br />
@@ -244,10 +244,10 @@ const InfoPanel = () => {
           <br />
           <br />
           <br />
-          <h2 className="white bold">FUZANGLONG.COM FEES</h2>
+          <h2 className="white bold">Fuzanglong.io FEES</h2>
           <br />
           <p className="white">
-            Fuzanglong.com will receive{" "}
+            Fuzanglong.io will receive{" "}
             <span className="bold yellow" style={{ fontSize: "50px" }}>
               1%
             </span>{" "}
