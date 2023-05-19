@@ -36,7 +36,7 @@ span {
 }
 
 .black {
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .white {
@@ -70,7 +70,6 @@ span {
 }
 
 .navbar-box {
-  background-color: #021025 !important;
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
@@ -89,7 +88,7 @@ span {
 }
 
 .nav-link-box:hover {
-  background-color: #f5a900 !important;
+  /* background-color: #f5a900 !important; */
 }
 
 .nav-link-box:focus {
@@ -97,7 +96,7 @@ span {
 }
 
 .address-head {
-  padding: 5px 30px;
+  padding: 10px 30px;
   border: 2px solid #ffbc26;
   border-radius: 50px;
   background-color: transparent;
@@ -108,13 +107,24 @@ span {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  background-image: linear-gradient(210deg,#000000 0%,#aa1816 100%)!important;
 }
 
 .yellow-btn {
-  padding: 10px 20px;
   border: none;
   background-color: #ffbc26 !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
+}
+
+.connect-meta-button{
+  border: none;
+  border-radius: 50px;
+  padding: 0px 24px;
+  color: #fff !important;
+  background-image: linear-gradient(85deg,#e09900 0%,#e02b20 100%)!important;
+  height: 44px;
+  font-size: 16px;
+  font-weight: bold
 }
 
 .yellow-btn:hover {
@@ -126,7 +136,7 @@ span {
   padding: 10px 20px;
   border: none;
   background-color: #00E3FF !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .yellow-btn-main:hover {
@@ -142,29 +152,31 @@ span {
 
 .border-btn:hover {
   background-color: #ffbc26 !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .cus-btn {
-  border: 1px solid #021025 !important;
-  background-color: #ffbc26 !important;
-  color: #021025 !important;
+  border: 1px solid #1E1E1E !important;
+  background-image: linear-gradient(85deg,#e09900 0%,#e02b20 100%)!important;
+  border-radius: 50px;
+  font-size: 24px;
+  color: #ffffff !important;
 }
 
 .cus-btn:hover {
   background-color: #ffbc26 !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .border-btn-blue {
-  border: 1px solid #021025 !important;
+  border: 1px solid #1E1E1E !important;
   background-color: #00E3FF !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .border-btn-blue:hover {
   background-color: #00CBE5 !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .rounded-yellow-btn {
@@ -206,7 +218,7 @@ span {
   border: 2px solid #ffbc26;
   border-radius: 7px;
   background-color: #0f1f38;
-  padding: 25px 17px;
+  padding: 20px 17px;
   transition: 0.3s;
 }
 
@@ -238,10 +250,11 @@ span {
 }
 
 .balance-box {
-  background-color: #2a3e5c;
+  background-color: #1E1E1E;
   color: white;
   padding: 4px 12px;
   font-size: 13px;
+  border-radius: 4px;
 }
 
 .pool-list {
@@ -262,7 +275,7 @@ span {
 }
 
 .small-border-btn:hover {
-  color: #021025;
+  color: #1E1E1E;
   background-color: #ffbc26;
 }
 
@@ -282,7 +295,7 @@ span {
 
 .select-input {
   background-color: #f4f4f5;
-  color: #021025;
+  color: #1E1E1E;
   margin-top: 6px;
   margin-bottom: 16px;
   width: 100%;
@@ -311,7 +324,7 @@ span {
   height: 45px;
   width: 15%;
   background-color: #ffbc26 !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .add-btn:hover {
@@ -388,7 +401,7 @@ span {
 }
 
 .tab-hr {
-  background-color: #2a3e5c;
+  background-color: #3e3e3e;
   margin-top: 7px;
 }
 
@@ -407,7 +420,7 @@ span {
   margin: 0;
   padding: 0;
   background: #ffbc26;
-  color: #021025;
+  color: #1E1E1E;
   padding: 1px 8px;
   position: absolute;
   top: 0;
@@ -423,7 +436,7 @@ span {
   margin: 0;
   padding: 0;
   background: #8f9aac;
-  color: #021025;
+  color: #1E1E1E;
   padding: 1px 8px;
   position: absolute;
   top: 0;

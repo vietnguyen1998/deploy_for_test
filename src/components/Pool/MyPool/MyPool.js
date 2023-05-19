@@ -77,7 +77,7 @@ const MyPool = (props) => {
 
   return (
     <Main>
-      <div style={{ backgroundColor: "#021025" }}>
+      <div style={{ backgroundColor: "#1E1E1E" }}>
         <div className="container body-section">
           <div className="row">
             {/* <!-- Side bar -->  */}
@@ -158,7 +158,7 @@ const MyPool = (props) => {
 
       {/* <!-- Footer section  --> */}
 
-      <footer style={{ backgroundColor: "#021025" }}>
+      <footer style={{ backgroundColor: "#1E1E1E" }}>
         <div className="container" align="center">
           <br />
           <br />

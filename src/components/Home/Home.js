@@ -42,60 +42,65 @@ const Home = (props) => {
   return (
     <Main>
       {/* <!-- Top banner --> */}
-      <br />
-      <br />
-      <br />
-      <br />
       <div
         className="bg-img banner-section"
         style={{
-          backgroundImage: "url(./images/top-img.jpg)",
           backgroundPosition: "left",
+          paddingTop: "84px"
         }}
       >
         <div className="container" style={{ paddingBottom: "400px" }}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <p
-            className="white banner-title wow fadeInLeft"
-            data-wow-duration="1.2s"
-            data-wow-delay="0s"
-          >
-            FUZANGLONG
-          </p>
-          <p
-            className="white banner-bio wow fadeInLeft"
-            data-wow-duration="1.2s"
-            data-wow-delay="0.2s"
-          >
-            The world's first smart contract-based <br />  sports and e-sports prediction pool creator.{" "}
-          </p>
-          <br />
-          <br />
-          <div
-            className="banner-btn wow fadeInLeft"
-            data-wow-duration="1.2s"
-            data-wow-delay="0.3s"
-          >
-            <a
-              href="/tutorials"
-              className="cus-btn bold"
-              style={{ padding: "16px 50px", textDecoration: "none" }}
-            >
-              <span>Let's get started!</span>
-            </a>
+          <div className="row">
+            <div className="col-md-6">
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <p
+                className="white banner-title wow fadeInLeft"
+                data-wow-duration="1.2s"
+                data-wow-delay="0s"
+              >
+                FUZANGLONG
+              </p>
+              <p
+                className="white banner-bio wow fadeInLeft"
+                data-wow-duration="1.2s"
+                data-wow-delay="0.2s"
+              >
+                The world's first smart contract-based <br />  sports and e-sports prediction pool creator.{" "}
+              </p>
+              <br />
+              <br />
+              <div
+                className="banner-btn wow fadeInLeft"
+                data-wow-duration="1.2s"
+                data-wow-delay="0.3s"
+              >
+                <a
+                  href="/tutorials"
+                  className="cus-btn bold"
+                  style={{ padding: "16px 50px", textDecoration: "none" }}
+                >
+                  <span>Let's get started!</span>
+                </a>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <br />
+              <img style={{ width: "570px" }} src="./images/FZL-Dragon.png" />
+            </div>
           </div>
+
         </div>
       </div>
 
       {/* <!-- Pool section --> */}
 
-      <div className="pool-section bg-img">
+      <div className="pool-section">
         <div className="container">
-          <div className="row">
+          <div className="row"  style={{paddingTop: 64, paddingBottom: 44}}>
             {/* <!-- Side bar -->  */}
 
             <div className="col-lg-3">
@@ -169,9 +174,6 @@ const Home = (props) => {
               </div>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
         </div>
 
         {/* // <!-- WHAT IS Fuzanglong.COM? --> */}
@@ -212,7 +214,7 @@ const Home = (props) => {
 
       {/* <!-- Footer section  --> */}
 
-      <footer style={{ backgroundColor: "#021025" }}>
+      <footer style={{ backgroundColor: "#1E1E1E" }}>
         <div className="container" align="center">
           <br />
           <br />

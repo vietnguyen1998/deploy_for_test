@@ -4,12 +4,12 @@
 }
 
 .banner-bio {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 .tab button {
   display: block !important;
-  background-color: #0F1F38 !important;
+  background-color: #383737 !important;
   width: 100% !important;
   border: none !important;
   text-align: left !important;
@@ -20,19 +20,20 @@
 }
 
 .tab button:hover {
-  background-color: #112340 !important;
+  background-color: #585858 !important;
   color: white !important;
 }
 
 .tab button.active {
   background-color: #ffbc26 !important;
-  color: #021025 !important;
+  color: #1E1E1E !important;
 }
 
 .pool-section {
   background-image: url(/images/bg-1.png);
   position: relative;
-  margin-top: -230px;
+  margin-top: -440px;
+  background-size: cover;
   z-index: 1;
 }
 
@@ -73,13 +74,13 @@
 }
 
 .card-header {
-  background-color: #021025 !important;
+  background-color: #1E1E1E !important;
   border: none !important;
   padding: 0px !important;
 }
 
 .card-body {
-  background-color: #021025 !important;
+  background-color: #1E1E1E !important;
   color: #8f9aac !important;
   padding: 0px !important;
 }
@@ -115,6 +116,10 @@
   margin-top: 100px;
 }
 
+.bg-separate{
+  background-image: linear-gradient(210deg,#000000 0%,#aa1816 100%)!important;
+}
+
 /*Mobile Responsive*/
 
 @media only screen and (max-width: 600px) {
@@ -139,13 +144,10 @@
     text-align: center;
   }
 
-  .pool-section {
-    background-image: url(/images/bg-1-mobile.png);
-    background-size: cover;
-  }
 
   .banner-btn {
     display: flex;
     justify-content: center;
   }
 }
+

@@ -63,7 +63,7 @@ const Sidebar = (props) => {
         >
           <span className="tab-list bold">Soccer</span>
         </button>
-        <div className="dropdown-menu" style={{ backgroundColor: "#021025" }}>
+        <div className="dropdown-menu" style={{ backgroundColor: "#1E1E1E" }}>
           <button
             className={`tablinks ${value === TabItems["epl"] ? "active" : ""}`}
             onClick={() => setValue && setValue(TabItems["epl"])}
@@ -134,7 +134,7 @@ const Sidebar = (props) => {
         >
           <span className="tab-list bold">Esports</span>
         </button>
-        <div className="dropdown-menu" style={{ backgroundColor: "#021025" }}>
+        <div className="dropdown-menu" style={{ backgroundColor: "#1E1E1E" }}>
           <button
             className={`tablinks ${value === TabItems["dota"] ? "active" : ""}`}
             onClick={() => setValue && setValue(TabItems["dota"])}

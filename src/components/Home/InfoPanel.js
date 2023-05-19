@@ -58,7 +58,7 @@ const InfoPanel = () => {
 
       {/* <!-- WHY play WITH Fuzanglong.COM? -->  */}
 
-      <div style={{ backgroundColor: "#021025" }}>
+      <div style={{ backgroundColor: "#1E1E1E" }}>
         <div className="container">
           <br />
           <br />
@@ -239,7 +239,7 @@ const InfoPanel = () => {
         <br />
         <br />
       </div>
-      <div style={{ backgroundColor: "#07172F" }}>
+      <div className="bg-separate">
         <div className="container" align="center">
           <br />
           <br />
@@ -274,7 +274,7 @@ const InfoPanel = () => {
           <br />
         </div>
       </div>
-      <div style={{ backgroundColor: "#021025" }}>
+      <div style={{ backgroundColor: "#1E1E1E" }}>
         <div className="container">
           <br />
           <div className="row">
@@ -300,12 +300,12 @@ const InfoPanel = () => {
               <div className="col">
                 <div
                   className="row border-box"
-                  style={{ backgroundColor: "#2A3E5C" }}
+                  style={{ backgroundColor: "#383737" }}
                 >
-                  <div className="col-md-3 my-auto">
-                    <img width="100" src="/images/icon.png" />
+                  <div className="col-md-2 my-auto">
+                    <img width="140" src="/images/icon.png" />
                   </div>
-                  <div className="col-md-9 my-auto">
+                  <div className="col-md-10 my-auto">
                     <br />
                     <span className="white">
                       Betting pool creators can create their own private betting
@@ -335,7 +335,7 @@ const InfoPanel = () => {
               <div className="col">
                 <div
                   className="row border-box"
-                  style={{ backgroundColor: "#2A3E5C" }}
+                  style={{ backgroundColor: "#3e3e3e" }}
                 >
                   <div className="col-md-3 my-auto">
                     <img style={{ width: "100px" }} src="/images/icon.png" />

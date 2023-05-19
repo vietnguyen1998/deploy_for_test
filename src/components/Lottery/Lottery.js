@@ -172,7 +172,7 @@ const Lottery = (props) => {
 
   return (
     <Main loading={loading} setLoading={setLoading}>
-      <div style={{ backgroundColor: "#021025" }}>
+      <div style={{ backgroundColor: "#1E1E1E" }}>
         <br />
         <br />
         <br />
