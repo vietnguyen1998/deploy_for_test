@@ -87,7 +87,7 @@ const Home = (props) => {
                 </a>
               </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 d-none d-md-block">
               <br />
               <img style={{ width: "570px" }} src="./images/FZL-Dragon.png" />
             </div>
@@ -116,7 +116,7 @@ const Home = (props) => {
                       textTransform: "uppercase",
                       marginTop: "100px",
                     }}
-                    className="white bold ml-2"
+                    className="white bold ml-3 ml-md-2"
                   >
                     Hottest Pool
                   </span>

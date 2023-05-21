@@ -20,3 +20,8 @@
 .create-pool .add-btn:hover {
   background-color: #eda400 !important;
 }
+
+.cus-background{
+  background-image: url(/images/bg-1.png);
+  background-size: cover;
+}

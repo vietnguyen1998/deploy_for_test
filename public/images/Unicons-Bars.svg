@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- ####################################################################
+
+This file was generates automatically via the 
+IconPacks.Browser (MIT-License). 
+
+Visit https://github.com/MahApps/MahApps.Metro.IconPacks and 
+https://github.com/MahApps/MahApps.Metro.IconPacks/blob/develop/LICENSE 
+for more information.
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+Icon-Name: 			TextAlignJustify
+Iconpack:			Coolicons
+Iconpack-Homepage: 	https://github.com/krystonschwarze/coolicons
+Iconpack-License:	https://github.com/krystonschwarze/coolicons#license
+
+#####################################################################-->
+
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="48"
+     height="48">
+    <path d="M896 128h-768v85.333h768v-85.333zM896 298.667h-768v85.333h768v-85.333zM896 469.334h-768v85.333h768v-85.333zM896 640h-768v85.333h768v-85.333z"
+          style="fill:#ffffff;
+                 stroke:none
+                 stroke-width:0;
+                 stroke-linecap:flat;
+                 stroke-linejoin:miter;"
+          transform="matrix(0.0625,0,0,-0.0625,-8,50.666656494140625)" />
+</svg>

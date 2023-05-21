@@ -152,7 +152,7 @@ p.whiteToggle::before {
   border-radius: 50px;
   position: absolute;
   left: -9px;
-  background: #0f1f38;
+  background: #1E1E1E;
   top: 52%;
   transform: translateY(-50%);
 }
@@ -164,7 +164,7 @@ p.whiteToggle::before {
   border-radius: 50px;
   position: absolute;
   right: -9px;
-  background: #0f1f38;
+  background: #1E1E1E;
   top: 52%;
   transform: translateY(-50%);
 }

@@ -20,7 +20,7 @@ const Searchbar = (props) => {
         value={value}
         onChange={(e) => setValue && setValue(e.target.value)}
       />
-      <button className="search-btn yellow-btn">
+      <button className="search-btn yellow-btn" style={{borderRadius: 0}}>
         <i className="fa fa-search"></i>
       </button>
     </>

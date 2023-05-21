@@ -5,8 +5,8 @@ const About = () => {
   return (
     <Main>
       <div className="container body-section">
-        <h3 className="black bold">What Is Fuzanglong</h3>
-        <p className="grey mt-4">
+        <h2 className="white bold mb-4">What Is Fuzanglong</h2>
+        <p className="mt-4"  style={{color: "#ffe5e5"}}>
         Fuzanglong is a Gaming-as-a-DeFi (GAAD) platform. We are not operators
           nor do we hold any database of players. Decentralization is the main
           theme in Fuzanglong. All pools are started by individuals who are keen to

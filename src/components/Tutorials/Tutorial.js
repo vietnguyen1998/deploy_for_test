@@ -5,9 +5,9 @@ const Tutorial = () => {
   return (
     <Main>
       <div className="container body-section">
-        <h3 className="black bold">How to Play</h3>
-        <p className="grey">We assume players will have the basic knowledge of transferring Ethereum-based digital tokens.</p>
-        <p className="grey">To play Fuzanglong, you will need the following:</p>
+        <h2 className="white bold mb-4">How to Play</h2>
+        <p className="" style={{color: "#ffe5e5"}}>We assume players will have the basic knowledge of transferring Ethereum-based digital tokens.</p>
+        <p className="" style={{color: "#ffe5e5"}}>To play Fuzanglong, you will need the following:</p>
         <div className="row">
           <div className="col-md-1 col-1 mt-3" align="right" style={{ color: "#10C35C" }}>
             <i style={{ fontSize: '23px' }} className="fa fa-check"></i>
@@ -42,8 +42,8 @@ const Tutorial = () => {
           </div>
         </div>
         <br /><br />
-        <h3 className="black bold">How to Install Metamask on Chrome</h3>
-        <p className="grey">Go to <a href="https://metamask.io/" target="_blank">metamask.io</a></p>
+        <h3 className="white bold">How to Install Metamask on Chrome</h3>
+        <p className="white">Go to <a href="https://metamask.io/" target="_blank">metamask.io</a></p>
       </div>
     </Main>
   );

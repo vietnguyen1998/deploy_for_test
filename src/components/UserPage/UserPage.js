@@ -38,17 +38,18 @@ const UserPage = (props) => {
   return (
     <Main loading={loading} setLoading={setLoading}>
       <div className="container body-section">
-        <div>
-          <h2>Create or change your User Name:</h2>
+          <h2 className="white">Create or change your User Name:</h2>
+        <div className="d-flex">
           <input
             className="text-input"
             type="text"
             {...bindName}
             style={{ maxWidth: "500px" }}
           ></input>
-          <button className={`yellow-btn mt-3 mr-3`} onClick={createName}>
+          <button style={{height: 45}} className={`yellow-btn mt-2 px-2 ml-3`} onClick={createName}>
             {hasName ? "Create" : "Change"}
           </button>
+          
         </div>
         {!hasName && (
           <div>

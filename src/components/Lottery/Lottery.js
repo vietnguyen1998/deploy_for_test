@@ -182,7 +182,7 @@ const Lottery = (props) => {
         <div
           className="container py-4"
           style={{
-            backgroundColor: "#0f1f38",
+            backgroundColor: "#1E1E1E",
             width: "60%",
             backgroundImage: "url(./images/lotteryBackground.png)",
             backgroundRepeat: "no-repeat",

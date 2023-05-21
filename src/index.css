@@ -81,6 +81,7 @@ span {
   font-weight: 500 !important;
   color: #ffffff !important;
   padding: 0px 8px !important;
+  padding-left: 0px !important;
 }
 
 .nav-link-box {
@@ -103,6 +104,15 @@ span {
   color: #ffbc26;
 }
 
+
+
+.address-head-small {
+  padding: 4px 12px;
+  border: 1px solid #ffbc26;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #ffbc26;
+}
 .bg-img {
   background-size: cover;
   background-position: top;
@@ -112,8 +122,11 @@ span {
 
 .yellow-btn {
   border: none;
+  border-radius: 4px;
+  padding: "4px 8px";
   background-color: #ffbc26 !important;
   color: #1E1E1E !important;
+  min-height: 35px;
 }
 
 .connect-meta-button{
@@ -217,7 +230,7 @@ span {
 .border-box {
   border: 2px solid #ffbc26;
   border-radius: 7px;
-  background-color: #0f1f38;
+  background-color: #1E1E1E;
   padding: 20px 17px;
   transition: 0.3s;
 }
@@ -258,7 +271,7 @@ span {
 }
 
 .pool-list {
-  background-color: #0f1f38;
+  background-color: #1E1E1E;
   margin: 9px 0px;
   padding-top: 20px;
   border-radius: 8px;
@@ -410,7 +423,7 @@ span {
 .parent {
   overflow: hidden; /* required */
   position: relative; /* required  for demo*/
-  background-color: #0f1f38;
+  background-color: #1E1E1E;
 }
 
 .ribbon {
@@ -531,8 +544,16 @@ span {
   padding-top: 120px;
 }
 
+.width-logo{
+  width: 48px;
+}
+
 @media (min-width: 576px){
   .margin-body-section {
     padding-top: 150px !important;
+  }
+
+  .width-logo{
+    width: 64px;
   }
 }

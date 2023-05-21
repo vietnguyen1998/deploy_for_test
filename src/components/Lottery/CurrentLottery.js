@@ -507,7 +507,7 @@ const CurrentLottery = (props) => {
     >
       <Modal.Body
         className="px-3 py-3"
-        style={{ backgroundColor: "#0f1f38", borderRadius: "15px" }}
+        style={{ backgroundColor: "#1E1E1E", borderRadius: "15px" }}
       >
         <div className="row ">
           <div className="col-12 text-center">

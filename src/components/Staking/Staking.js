@@ -109,16 +109,16 @@ const Staking = () => {
   return (
     <Main reload={reload} loading={loading} setLoading={setLoading}>
       <div className="container body-section">
-        <h3 className="bold black">Earn Rewards</h3>
-        <p className="grey">
+        <h2 className="bold white mb-4">Earn Rewards</h2>
+        <p style={{color: "#ffe5e5"}}>
           Earn Rewards allows you to Stake FZL in Fuzanglong DeFi and be rewarded
           with FZL
         </p>
         <br />
-        <span className="bold black">Stake Now</span>
+        <span className="bold white">Stake Now</span>
         <div className="row">
           <div className="col-md-6 col-12">
-            <form className="grey mt-3">
+            <form className="mt-3"  style={{color: "#ffe5e5"}}>
               <span>Input Amount Of FZL to Stake</span>
               <br />
               <input
@@ -129,12 +129,13 @@ const Staking = () => {
                 {...bindAmount}
                 min="0"
               ></input>
-              <span className="black">FZL</span>
+              <span className="white">FZL</span>
               <br />
             </form>
             <div>
               <button
                 className={`yellow-btn mt-2 mr-3`}
+                style={{height: 35}}
                 onClick={approved ? stakeCal : approveCal}
               >
                 {approved ? "Stake" : "Approve FZL"}
@@ -143,11 +144,11 @@ const Staking = () => {
             <br />
             <br />
             <hr />
-            <span className="grey mr-3">Total Pool:</span>
-            <span>{totalPool} FZL</span>
+            <span className="mr-3"  style={{color: "#ffe5e5"}}>Total Pool:</span>
+            <span className="white bold">{totalPool} FZL</span>
             <br />
-            <span className="grey mr-3">Your Current FZL Staked:</span>
-            <span>
+            <span className="mr-3"  style={{color: "#ffe5e5"}}>Your Current FZL Staked:</span>
+            <span className="white bold">
               {stakeAmount} FZL (
               {(totalPool == 0 ? 0 : (stakeAmount * 100) / totalPool).toFixed(
                 2
@@ -155,14 +156,14 @@ const Staking = () => {
               %)
             </span>
             <br />
-            <span className="grey mr-3">Your Earned FZL:</span>
-            <span>{stakeIncome} FZL</span>
+            <span className="mr-3"  style={{color: "#ffe5e5"}}>Your Earned FZL:</span>
+            <span className="white bold">{stakeIncome} FZL</span>
             <br />
-            <span className="grey mr-3">Your Earned ETH:</span>
-            <span>{stakeIncomeEth} ETH</span>
+            <span className="mr-3"  style={{color: "#ffe5e5"}}>Your Earned ETH:</span>
+            <span className="white bold">{stakeIncomeEth} ETH</span>
             <br />
-            <span className="grey mr-3">Your Earned USDT:</span>
-            <span>{stakeIncomeUsdt} USDT</span>
+            <span className="mr-3" style={{color: "#ffe5e5"}}>Your Earned USDT:</span>
+            <span className="white bold">{stakeIncomeUsdt} USDT</span>
             <br />
             <br />
             {stakeAmount > 0 && (

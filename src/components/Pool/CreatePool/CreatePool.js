@@ -135,9 +135,9 @@ const CreatePool = (props) => {
   useEffect(() => {
     if (document.activeElement.id != "calAmountInput") {
       let _calcCalAmount = 0
-      if(selectedCoin.label == SupportedCoins[2].label){
-        _calcCalAmount = maxPoolSize / getPoolSizeMax(SupportedCoins[2].label) ;
-      }else{
+      if (selectedCoin.label == SupportedCoins[2].label) {
+        _calcCalAmount = maxPoolSize / getPoolSizeMax(SupportedCoins[2].label);
+      } else {
         _calcCalAmount = (maxPoolSize / getPoolSizeMax(selectedCoin.label)) * StartShibsFee
       }
       _calcCalAmount = _calcCalAmount < 1 ? 1 : _calcCalAmount;
@@ -258,7 +258,7 @@ const CreatePool = (props) => {
         bools,
         handicap
       );
-   
+
       debugger
       await tx.wait();
       const poolAddress = await getPoolManager().getLastOwnPool(0, {
@@ -366,7 +366,7 @@ const CreatePool = (props) => {
   return (
     <Main loading={loading} setLoading={setLoading}>
       <div
-        className="container-fluid fees-box-2 fadeInUp margin-body-section "
+        className="container-fluid fadeInUp margin-body-section "
         data-wow-duration="1s"
         data-wow-delay="0s"
         style={{ height: 340, backgroundSize: "cover" }}
@@ -386,7 +386,7 @@ const CreatePool = (props) => {
                 <div
                   style={{ display: "flex", alignItems: "center", width: 200 }}
                 >
-                  <p className="m-0 mr-2 bold" style={{ textAlign: "right" }}>
+                  <p className="m-0 mr-2 bold white" style={{ textAlign: "right" }}>
                     {game.team1}
                   </p>
                   <img
@@ -404,10 +404,10 @@ const CreatePool = (props) => {
                   style={{ paddingLeft: 24, paddingRight: 24 }}
                   className="white d-none d-md-block"
                 >
-                  <p className="bold" style={{ marginBottom: 4 }}>
+                  <p className="bold white" style={{ marginBottom: 4 }}>
                     {timestampToLocalDate(game.date, "D MMM YYYY")}{" "}
                   </p>
-                  <p style={{ color: "#00E3FF" }} className="bold m-0">
+                  <p style={{ color: "#00E3FF" }} className="bold m-0 white">
                     {timestampToLocalDate(game.date, "H:mm UTC").padStart(
                       9,
                       "0"
@@ -428,26 +428,26 @@ const CreatePool = (props) => {
                     }}
                     src={game.logo2}
                   />
-                  <p className="m-0 ml-2 bold" style={{ textAlign: "left" }}>
+                  <p className="m-0 ml-2 bold white" style={{ textAlign: "left" }}>
                     {game.team2}
                   </p>
                 </div>
               </div>
               <div
-                  style={{ paddingLeft: 24, paddingRight: 24 }}
-                  className="white d-block d-md-none mt-3"
-                >
-                  <span className="bold" style={{ marginBottom: 4 }}>
-                    {timestampToLocalDate(game.date, "D MMM YYYY")}{" "}
-                  </span>
-                  <span style={{ color: "#00E3FF" }} className="bold m-0">
-                    {timestampToLocalDate(game.date, "H:mm UTC").padStart(
-                      9,
-                      "0"
-                    )}{" "}
-                    {formatTimezone(game.date)}
-                  </span>
-                </div>
+                style={{ paddingLeft: 24, paddingRight: 24 }}
+                className="white d-block d-md-none mt-3"
+              >
+                <span className="bold white" style={{ marginBottom: 4 }}>
+                  {timestampToLocalDate(game.date, "D MMM YYYY")}{" "}
+                </span>
+                <span style={{ color: "#00E3FF" }} className="bold m-0 white">
+                  {timestampToLocalDate(game.date, "H:mm UTC").padStart(
+                    9,
+                    "0"
+                  )}{" "}
+                  {formatTimezone(game.date)}
+                </span>
+              </div>
             </>
           )) || (
               <div className="white">
@@ -457,378 +457,382 @@ const CreatePool = (props) => {
             )}
         </div>
       </div>
-      <div className="container test-res create-pool" align="center">
-        <br />
-        <div className="row">
-          <div className="col-md-6 col-12">
-            <form className="grey">
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Please select types of games
-              </p>
-              <select
-                disabled={isGameTypeDisabled}
-                className="select-input"
-                name="Type of games"
-                {...bindGameType}
-              >
-                {gameTypeOptions}
-              </select>
-              <br />
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Please select which game to create Pool for
-              </p>
-              {(matchOptions.length > 0 && (
+      <div className="container-fluid cus-background">
+        <div className="container test-res create-pool" align="center">
+          <br />
+          <div className="row">
+            <div className="col-md-6 col-12">
+              <form className="grey">
+                <p className="m-0 white" style={{ textAlign: "left" }}>
+                  Please select types of games
+                </p>
                 <select
+                  disabled={isGameTypeDisabled}
                   className="select-input"
-                  name="Game"
-                  {...bindMatch}
-                  style={{ textAlignLast: "left" }}
+                  name="Type of games"
+                  {...bindGameType}
                 >
-                  {matchOptions}
+                  {gameTypeOptions}
                 </select>
-              )) || (
-                  <>
-                    <br />
-                    <h6 style={{ color: "red" }}>
-                      No matches found at the moment.
-                    </h6>
-                  </>
-                )}
-              <br />
-              <div className="row">
-                <div className="col form-check" style={{ textAlign: "left" }}>
-                  <input
-                    disabled={matchOptions.length == 0}
-                    className="form-check-input"
-                    style={{ margin: 0 }}
-                    type="checkbox"
-                    value={hasHandicap}
-                    onChange={(e) => {
-                      setHasHandicap(e.target.checked);
-                    }}
-                  ></input>
-
-                  <label className="form-check-label black ml-4">
-                    Enable Handicap
-                  </label>
-                </div>
-
-                {hasHandicap && (
-                  <div className="col form-check">
+                <br />
+                <p className="m-0 white" style={{ textAlign: "left" }}>
+                  Please select which game to create Pool for
+                </p>
+                {(matchOptions.length > 0 && (
+                  <select
+                    className="select-input"
+                    name="Game"
+                    {...bindMatch}
+                    style={{ textAlignLast: "left" }}
+                  >
+                    {matchOptions}
+                  </select>
+                )) || (
+                    <>
+                      <br />
+                      <h6 style={{ color: "red" }}>
+                        No matches found at the moment.
+                      </h6>
+                    </>
+                  )}
+                <br />
+                <div className="row">
+                  <div className="col form-check" style={{ textAlign: "left" }}>
                     <input
+                      disabled={matchOptions.length == 0}
                       className="form-check-input"
+                      style={{ margin: 0 }}
                       type="checkbox"
-                      value={isZeroHandicap}
+                      value={hasHandicap}
                       onChange={(e) => {
-                        setIsZeroHandicap(e.target.checked);
-                        setHandicapWholeValue(0);
-                        setHandicapFractionalValue(0);
+                        setHasHandicap(e.target.checked);
                       }}
                     ></input>
-                    <label className="form-check-label black">
-                      <TutorialPopup content="Plays are refunded on a draw result.">
-                        <span>Set Handicap to 0</span>
-                      </TutorialPopup>
+
+                    <label className="form-check-label white ml-4">
+                      Enable Handicap
                     </label>
                   </div>
-                )}
-              </div>
-              {hasHandicap && (
-                <>
-                  <div>
-                    <input
-                      className="text-input"
-                      type="text"
-                      disabled
-                      value={filterMatches[Number(match)].team1}
-                    ></input>
-                  </div>
-                  <div>
-                    <select className="select-input" {...bindHandicapType}>
-                      <option key="0" value="0">
-                        Asian Handicap
-                      </option>
-                      <option key="1" value="1">
-                        Point Spread
-                      </option>
-                    </select>
-                  </div>
-                  <div className="row">
-                    <div className="col">
-                      <select
-                        className="select-input"
-                        disabled={isZeroHandicap}
-                        {...bindHandicapSide}
-                      >
-                        <option key="1" value="-1">
-                          -
-                        </option>
-                        <option key="2" value="1">
-                          +
-                        </option>
-                      </select>
-                    </div>
-                    <div className="col">
-                      <select
-                        className="select-input"
-                        disabled={isZeroHandicap}
-                        value={handicapWholeValue}
+
+                  {hasHandicap && (
+                    <div className="col form-check">
+                      <input
+                        className="form-check-input"
+                        type="checkbox"
+                        value={isZeroHandicap}
                         onChange={(e) => {
-                          setHandicapWholeValue(parseInt(e.target.value));
+                          setIsZeroHandicap(e.target.checked);
+                          setHandicapWholeValue(0);
+                          setHandicapFractionalValue(0);
                         }}
-                      >
+                      ></input>
+                      <label className="form-check-label black">
+                        <TutorialPopup content="Plays are refunded on a draw result.">
+                          <span>Set Handicap to 0</span>
+                        </TutorialPopup>
+                      </label>
+                    </div>
+                  )}
+                </div>
+                {hasHandicap && (
+                  <>
+                    <div>
+                      <input
+                        className="text-input"
+                        type="text"
+                        disabled
+                        value={filterMatches[Number(match)].team1}
+                      ></input>
+                    </div>
+                    <div>
+                      <select className="select-input" {...bindHandicapType}>
                         <option key="0" value="0">
-                          0
+                          Asian Handicap
                         </option>
                         <option key="1" value="1">
-                          1
-                        </option>
-                        <option key="2" value="2">
-                          2
-                        </option>
-                        <option key="3" value="3">
-                          3
-                        </option>
-                        <option key="4" value="4">
-                          4
-                        </option>
-                        <option key="5" value="5">
-                          5
-                        </option>
-                        <option key="6" value="6">
-                          6
-                        </option>
-                        <option key="7" value="7">
-                          7
-                        </option>
-                        <option key="8" value="8">
-                          8
-                        </option>
-                        <option key="9" value="9">
-                          9
-                        </option>
-                        <option key="10" value="10">
-                          10
+                          Point Spread
                         </option>
                       </select>
                     </div>
-                    <div className="col">
-                      <select
-                        className="select-input"
-                        disabled={isZeroHandicap}
-                        value={handicapFractionalValue}
-                        onChange={(e) => {
-                          setHandicapFractionalValue(
-                            parseFloat(e.target.value)
-                          );
-                        }}
-                      >
-                        <option key="0" value="0">
-                          0
-                        </option>
-                        {handicapType == "0" && (
-                          <option key="0.25" value="0.25">
-                            0.25
+                    <div className="row">
+                      <div className="col">
+                        <select
+                          className="select-input"
+                          disabled={isZeroHandicap}
+                          {...bindHandicapSide}
+                        >
+                          <option key="1" value="-1">
+                            -
                           </option>
-                        )}
-
-                        <option key="0.5" value="0.5">
-                          0.5
-                        </option>
-
-                        {handicapType == "0" && (
-                          <option key="0.75" value="0.75">
-                            0.75
+                          <option key="2" value="1">
+                            +
                           </option>
-                        )}
-                      </select>
+                        </select>
+                      </div>
+                      <div className="col">
+                        <select
+                          className="select-input"
+                          disabled={isZeroHandicap}
+                          value={handicapWholeValue}
+                          onChange={(e) => {
+                            setHandicapWholeValue(parseInt(e.target.value));
+                          }}
+                        >
+                          <option key="0" value="0">
+                            0
+                          </option>
+                          <option key="1" value="1">
+                            1
+                          </option>
+                          <option key="2" value="2">
+                            2
+                          </option>
+                          <option key="3" value="3">
+                            3
+                          </option>
+                          <option key="4" value="4">
+                            4
+                          </option>
+                          <option key="5" value="5">
+                            5
+                          </option>
+                          <option key="6" value="6">
+                            6
+                          </option>
+                          <option key="7" value="7">
+                            7
+                          </option>
+                          <option key="8" value="8">
+                            8
+                          </option>
+                          <option key="9" value="9">
+                            9
+                          </option>
+                          <option key="10" value="10">
+                            10
+                          </option>
+                        </select>
+                      </div>
+                      <div className="col">
+                        <select
+                          className="select-input"
+                          disabled={isZeroHandicap}
+                          value={handicapFractionalValue}
+                          onChange={(e) => {
+                            setHandicapFractionalValue(
+                              parseFloat(e.target.value)
+                            );
+                          }}
+                        >
+                          <option key="0" value="0">
+                            0
+                          </option>
+                          {handicapType == "0" && (
+                            <option key="0.25" value="0.25">
+                              0.25
+                            </option>
+                          )}
+
+                          <option key="0.5" value="0.5">
+                            0.5
+                          </option>
+
+                          {handicapType == "0" && (
+                            <option key="0.75" value="0.75">
+                              0.75
+                            </option>
+                          )}
+                        </select>
+                      </div>
                     </div>
-                  </div>
-                </>
-              )}
-              <br />
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Title
-              </p>
-              <input
-                className="text-input"
-                maxLength="100"
-                type="text"
-                {...bindTitle}
-              ></input>
-              <br />
-              <p className="m-0" style={{ textAlign: "left" }}>
-                Description
-              </p>
-              <textarea
-                className="form-control description-box"
-                rows="5"
-                id="description"
-                placeholder="Type something..."
-                {...bindDescription}
-                cols="200"
-                maxLength="200"
-              ></textarea>
-              <div align="right">
-                <p className="small-text mt-2">*{charsLeft} characters left</p>
-              </div>
-            </form>
-          </div>
-          <div className="col-md-6 col-12">
-            <form className="grey">
-              <TutorialPopup content="This is the cryptocurrency which players can play with.">
-                <p className="m-0" style={{ textAlign: "left" }}>
-                  Please select the currency for the Pool
+                  </>
+                )}
+                <br />
+                <p className="m-0 white" style={{ textAlign: "left" }}>
+                  Title
                 </p>
-              </TutorialPopup>
-              <select className="select-input" name="Crypto" {...bindCoin}>
-                {supportedCoinOptions}
-              </select>
-              <br />
-              <TutorialPopup content="The amount of FZL staked will determine the Max Pool Size. 50% of your FZL will be burnt and another 50% will be sent to stakers after the match has ended successfully.">
-                <p className="m-0" style={{ textAlign: "left" }}>
-                  Pool Creation Fee in FZL
+                <input
+                  className="text-input"
+                  maxLength="100"
+                  type="text"
+                  {...bindTitle}
+                ></input>
+                <br />
+                <p className="m-0 white" style={{ textAlign: "left" }}>
+                  Description
                 </p>
-              </TutorialPopup>
-              <input
-                className="text-input"
-                type="number"
-                value={calAmount}
-                id="calAmountInput"
-                min="0"
-                onChange={(e) => {
-                  setCalAmount(e.target.value);
-                }}
-              />
-              <br />
-              <TutorialPopup content="This is the maximum amount of cryptocurrency from all players which the Pool can accept.">
-                <p className="m-0" style={{ textAlign: "left" }}>
-                  Max Pool Size in {selectedCoin.label}{" "}
-                </p>
-              </TutorialPopup>
-              <div className="form-inline">
+                <textarea
+                  className="form-control description-box"
+                  rows="5"
+                  id="description"
+                  placeholder="Type something..."
+                  {...bindDescription}
+                  cols="200"
+                  maxLength="200"
+                ></textarea>
+                <div align="right">
+                  <p className="small-text mt-2 white">*{charsLeft} characters left</p>
+                </div>
+              </form>
+            </div>
+            <div className="col-md-6 col-12">
+              <form className="grey">
+                <TutorialPopup content="This is the cryptocurrency which players can play with.">
+                  <p className="m-0 white" style={{ textAlign: "left" }}>
+                    Please select the currency for the Pool
+                  </p>
+                </TutorialPopup>
+                <select className="select-input" name="Crypto" {...bindCoin}>
+                  {supportedCoinOptions}
+                </select>
+                <br />
+                <TutorialPopup content="The amount of FZL staked will determine the Max Pool Size. 50% of your FZL will be burnt and another 50% will be sent to stakers after the match has ended successfully.">
+                  <p className="m-0 white" style={{ textAlign: "left" }}>
+                    Pool Creation Fee in FZL
+                  </p>
+                </TutorialPopup>
                 <input
                   className="text-input"
                   type="number"
-                  value={maxPoolSize}
-                  id="maxPoolSizeInput"
+                  value={calAmount}
+                  id="calAmountInput"
                   min="0"
                   onChange={(e) => {
-                    setMaxPoolSize(e.target.value);
-                  }}
-                  style={{ maxWidth: "300px", marginBottom: 0 }}
-                />
-                <button
-                  className="btn btn-warning"
-                  type="button"
-                  onClick={() =>
-                    setMaxPoolSize(
-                      getPoolSizeLimit(selectedCoin.label)
-                    )
-                  }
-                  style={{
-                    marginTop: "10px",
-                    minWidth: "90px",
-                    marginLeft: "10px",
-                  }}
-                >
-                  <small className="px-2">UNLIMITED</small>
-                </button>
-              </div>
-              <br />
-              <div className="row">
-                <input
-                  type="range"
-                  className="form-range ml-5"
-                  style={{ width: "500px" }}
-                  max={getPoolSizeLimit(selectedCoin.label)}
-                  min={getPoolSizeMax(selectedCoin.label)}
-                  step="0.005"
-                  value={maxPoolSize}
-                  onChange={(e) => {
-                    setMaxPoolSize(e.target.value);
+                    setCalAmount(e.target.value);
                   }}
                 />
-              </div>
-              <br />
-              <TutorialPopup content="All plays will be refunded if pool does not reach this size.">
-                <p className="m-0" style={{ textAlign: "left" }}>
-                  Min pool size
-                </p>
-              </TutorialPopup>
-              <input
-                className="text-input"
-                type="number"
-                min="0"
-                {...bindMinPoolSize}
-              />
-              <br />
-              <TutorialPopup content="This is the percentage of the Winning plays given to you as a reward for starting the pool. Please note that it is NOT based on total plays played in the pool.">
-                <p className="m-0" style={{ textAlign: "left" }}>
-                  Pool Fee (%), max: 95%
-                </p>
-              </TutorialPopup>
-              <input
-                className="text-input"
-                type="number"
-                min="0"
-                {...bindFee}
-                max="95"
-              />
-              <br />
-              <TutorialPopup content="The minimum amount of cryptocurrencies a player can play with.">
-                <p className="m-0" style={{ textAlign: "left" }}>
-                  Minimum Play Size in {selectedCoin.label} per player
-                </p>
-              </TutorialPopup>
-              <input
-                className="text-input"
-                type="number"
-                {...bindMinBet}
-                min="0"
-              />
-              <br />
-
-              <div className="form-check" style={{ textAlign: "left" }}>
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value={isPrivate}
-                  onChange={(e) => setIsPrivate(e.target.checked)}
-                  id="flexCheckDefault"
-                ></input>
-                <TutorialPopup content=" If enabled, this pool can only be played by addresses which you have whitelisted. Only whitelisted addresses can view and join this private pool.">
-                  <label
-                    className="form-check-label black"
-                    htmlFor="flexCheckDefault"
-                  >
-                    Private Pool
-                  </label>
+                <br />
+                <TutorialPopup content="This is the maximum amount of cryptocurrency from all players which the Pool can accept.">
+                  <p className="m-0 white" style={{ textAlign: "left" }}>
+                    Max Pool Size in {selectedCoin.label}{" "}
+                  </p>
                 </TutorialPopup>
-              </div>
-              {isPrivate && (
-                <WhiteListPanel
-                  whitelist={whitelist}
-                  updateWhitelist={setWhitelist}
+                <div className="form-inline">
+                  <input
+                    className="text-input"
+                    type="number"
+                    value={maxPoolSize}
+                    id="maxPoolSizeInput"
+                    min="0"
+                    onChange={(e) => {
+                      setMaxPoolSize(e.target.value);
+                    }}
+                    style={{ maxWidth: "300px", marginBottom: 0 }}
+                  />
+                  <button
+                    className="btn btn-warning"
+                    type="button"
+                    onClick={() =>
+                      setMaxPoolSize(
+                        getPoolSizeLimit(selectedCoin.label)
+                      )
+                    }
+                    style={{
+                     height: 45,
+                     marginTop: 7,
+                     marginLeft: 12
+                    }}
+                  >
+                    <small className="px-2">UNLIMITED</small>
+                  </button>
+                </div>
+                <br />
+                <div className="row">
+                  <input
+                    type="range"
+                    className="form-range ml-5"
+                    style={{ width: "500px" }}
+                    max={getPoolSizeLimit(selectedCoin.label)}
+                    min={getPoolSizeMax(selectedCoin.label)}
+                    step="0.005"
+                    value={maxPoolSize}
+                    onChange={(e) => {
+                      setMaxPoolSize(e.target.value);
+                    }}
+                  />
+                </div>
+                <br />
+                <TutorialPopup content="All plays will be refunded if pool does not reach this size.">
+                  <p className="m-0 white" style={{ textAlign: "left" }}>
+                    Min pool size
+                  </p>
+                </TutorialPopup>
+                <input
+                  className="text-input"
+                  type="number"
+                  min="0"
+                  {...bindMinPoolSize}
                 />
-              )}
-            </form>
+                <br />
+                <TutorialPopup content="This is the percentage of the Winning plays given to you as a reward for starting the pool. Please note that it is NOT based on total plays played in the pool.">
+                  <p className="m-0 white" style={{ textAlign: "left" }}>
+                    Pool Fee (%), max: 95%
+                  </p>
+                </TutorialPopup>
+                <input
+                  className="text-input"
+                  type="number"
+                  min="0"
+                  {...bindFee}
+                  max="95"
+                />
+                <br />
+                <TutorialPopup content="The minimum amount of cryptocurrencies a player can play with.">
+                  <p className="m-0 white" style={{ textAlign: "left" }}>
+                    Minimum Play Size in {selectedCoin.label} per player
+                  </p>
+                </TutorialPopup>
+                <input
+                  className="text-input"
+                  type="number"
+                  {...bindMinBet}
+                  min="0"
+                />
+                <br />
+
+                <div className="form-check" style={{ textAlign: "left" }}>
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    value={isPrivate}
+                    onChange={(e) => setIsPrivate(e.target.checked)}
+                    id="flexCheckDefault"
+                  ></input>
+                  <TutorialPopup content=" If enabled, this pool can only be played by addresses which you have whitelisted. Only whitelisted addresses can view and join this private pool.">
+                    <label
+                      className="form-check-label white"
+                      htmlFor="flexCheckDefault"
+                    >
+                      Private Pool
+                    </label>
+                  </TutorialPopup>
+                </div>
+                {isPrivate && (
+                  <WhiteListPanel
+                    whitelist={whitelist}
+                    updateWhitelist={setWhitelist}
+                  />
+                )}
+              </form>
+            </div>
           </div>
-        </div>
-        <div style={{ marginBottom: 100 }}>
-          <button
-            disabled={canApproveCreate ? false : true}
-            className={`${canApproveCreate ? "yellow" : "grey"}-btn`}
-            style={{
-              marginBottom: 100,
-              width: "-webkit-fill-available",
-              padding: "8px 4px",
-              margin: "24px 48px",
-            }}
-            onClick={approved ? clickCreatePool : approveCal}
-          >
-            {approved ? "Create Pool" : "Approve FZL"}
-          </button>
+          <div style={{ marginBottom: 100 }}>
+            <button
+              disabled={canApproveCreate ? false : true}
+              className={`${canApproveCreate ? "yellow" : "grey"}-btn`}
+              style={{
+                marginBottom: 100,
+                width: "-webkit-fill-available",
+                padding: "8px 4px",
+                margin: "24px 48px",
+                fontWeight: "bold",
+                height: 45
+              }}
+              onClick={approved ? clickCreatePool : approveCal}
+            >
+              {approved ? "Create Pool" : "Approve FZL"}
+            </button>
+          </div>
         </div>
       </div>
     </Main>
